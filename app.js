@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// call the moveMole function
 	moveMole();
 
-	// countDown function that makes current time go down by 1 decrementally. If the currentTime which is zero, we've a game over
+	// countDown function that makes current time go down by 1 decrementally. If the currentTime is zero, we've a game over
 	function countDown () {
 		currentTime--;
 		timeLeft.textContent = currentTime;
