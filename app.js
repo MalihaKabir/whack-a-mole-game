@@ -52,10 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		timeLeft.textContent = currentTime;
 
 		if (currentTime === 0) {
+			// clear the interval to finish the game
 			clearInterval(timerId);
 			alert(`GAME OVER! Your final score is: ${result}. Refresh the page to play again with timer.`);
 		}
 	}
-
+	
+	// invoke countdown function within a sec again & again until countDown() clear the interval
 	let timerId = setInterval(countDown, 1000);
 });
