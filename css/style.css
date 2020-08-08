@@ -40,6 +40,6 @@ h3 {
 }
 
 .mole {
-	background-image: url('/img/mole2.jpg');
+	background-image: url('../img/mole2.jpg');
 	background-size: cover;
 }
