@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Whack a mole</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-      <div class="makeItMiddle">
-        <h1>Whack a mole!</h1>
-  
-        <h2>Your score:</h2>
-        <h2 id="score">0</h2>
-  
-        <h2>Time left(sec):</h2>
-        <h2 id="time-left">60</h2>
-  
-        <div class="grid">
-          <div class="square" id="1"></div>
-          <div class="square" id="2"></div>
-          <div class="square" id="3"></div>
-          <div class="square" id="4"></div>
-          <div class="square" id="5"></div>
-          <div class="square" id="6"></div>
-          <div class="square" id="7"></div>
-          <div class="square" id="8"></div>
-          <div class="square" id="9"></div>
-        </div>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Whack-A-Mole</title>
+</head>
+<body>
+    <div>
+        <button id="start-btn">Start</button>
+        <h3>Score: <span id="score">0</span></h3>
+        <h3>Timer: <span id="timer-id">60</span></h3>
 
-  </body>
-  <script src="app.js" charset="utf-8"></script>
+        <div class="grid">
+            <!-- 3x3 = 9 divs -->
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+            <div class="small-grid"></div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
 </html>

@@ -1,0 +1,45 @@
+body {
+	display: flex;
+	justify-content: center;
+	padding: 2em;
+}
+
+#start-btn {
+	width: 100%;
+	padding: 5px 0px;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: .5em;
+	color: rgb(231, 106, 33);
+	background-color: rgba(231, 106, 33, 0.199);
+	border: 1px solid rgb(231, 106, 33);
+	border-radius: 5px;
+}
+
+h3 {
+	padding-bottom: 0.5em;
+	color: rgb(231, 106, 33);
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	/* border: 1px solid #666666;
+	border-radius: 6px; */
+	width: 300px;
+	height: 300px;
+}
+
+.small-grid {
+	width: 98px;
+	height: 98px;
+	border: 1px solid rgb(231, 106, 33);
+	border-radius: 5px;
+}
+
+.mole {
+	background-image: url('/img/mole2.jpg');
+	background-size: cover;
+}
