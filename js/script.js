@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let timeCount = null;
 	let timeLeft = timerID.textContent;
 	const lengthOfGrid = smallGrids.length;
-	let divIdThatGetHit = 1;
+	let divIdThatGetHit = 0;
 
 	function grabSmallGridsRandomly () {
 		smallGrids.forEach((smallGrid, i) => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	smallGrids.forEach((div) => {
 		div.addEventListener('click', () => {
 			if (div.id === divIdThatGetHit) {
-				score++;
+				score += 10;
 				scoreTag.textContent = score;
 			}
 		});
