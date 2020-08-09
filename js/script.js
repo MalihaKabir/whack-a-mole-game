@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const timerID = document.querySelector('#timer-id');
 	const smallGrids = document.querySelectorAll('.small-grid');
 	let score = 0;
-	let timerMole = null;
-	let timeCount = null;
+	let timerMole = null; // to set time interval for mole'e random appearance
+	let timeCount = null; 
 	let timeLeft = timerID.textContent;
 	const lengthOfGrid = smallGrids.length;
 	let divIdThatGetHit = 0;
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if (timeLeft === 0) randomDiv.classList.remove('mole');
 	}
 
+	// set an eventListener for each small div that gets clicked. And if a player hits the mole or clicks on correct div, then add score
 	smallGrids.forEach((div) => {
 		div.addEventListener('click', () => {
 			if (div.id === divIdThatGetHit) {
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		timerID.textContent = timeLeft;
 	}
 
+	// move mole after 500mlsec and start counting down
 	function moveMole () {
 
 			timerMole ? (timerMole = null) :
