@@ -4,10 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	const timerID = document.querySelector('#timer-id');
 	const smallGrids = document.querySelectorAll('.small-grid');
 	let score = 0;
+	let setTimerID = 60;
+	timerID.textContent = setTimerID;
 	let timeLeft = timerID.textContent;
 	let timerMole = null;
 	let timeCount = null;
 	let divIdThatGetHit = 0;
+
+	function startGame () {
+		score = 0;
+		scoreTag.textContent = score;
+		clearInterval(timerMole);
+		clearInterval(timeCount);
+		setTimerID = 60;
+		timerID.textContent = setTimerID;
+		timeLeft = timerID.textContent;
+		timerMole = null;
+		timeCount = null;
+		divIdThatGetHit = 0;
+		callAccordingToTimer();
+	}
 
 	function selectDivRandomly () {
 		const lengthOfGrid = smallGrids.length;
@@ -40,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			clearInterval(timeCount);
 			startBtn.removeEventListener('click', callAccordingToTimer);
 			alert('Game Over!');
+			startBtn.addEventListener('click', startGame);
 		}
 	}
 
@@ -52,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			timeCount ? null :
 			(timeCount = setInterval(countDown, 1000));
 
-		startBtn.removeEventListener('click', callAccordingToTimer);
+		startBtn.removeEventListener('click', startGame);
 	}
 
-	startBtn.addEventListener('click', callAccordingToTimer);
+	startBtn.addEventListener('click', startGame);
 });
