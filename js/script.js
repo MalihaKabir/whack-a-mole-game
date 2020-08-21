@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			timeCount ? null :
 			(timeCount = setInterval(countDown, 1000));
+
+		startBtn.removeEventListener('click', callAccordingToTimer);
 	}
 
 	startBtn.addEventListener('click', callAccordingToTimer);
